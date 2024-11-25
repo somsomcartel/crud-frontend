@@ -67,16 +67,19 @@ class App extends StatelessWidget {
                       icon: const Icon(Icons.login_outlined),
                     ),
                     // 회원가입 버튼
-                    IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const JoinScreen(),
-                          ),
-                        );
-                      },
-                      icon: const Icon(Icons.add_circle_outline_rounded),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4.0, right: 8.0),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const JoinScreen(),
+                            ),
+                          );
+                        },
+                        icon: const Icon(Icons.add_circle_outline_rounded),
+                      ),
                     ),
                   ],
                 ),

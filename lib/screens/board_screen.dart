@@ -1,3 +1,4 @@
+import 'package:crud/screens/write_screen.dart';
 import 'package:crud/widgets/article_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -27,14 +28,18 @@ class BoardScreen extends StatelessWidget {
                 ),
                 IconButton(
                     onPressed: () {
-                      print("작성");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const WriteScreen(),
+                        ),
+                      );
                     },
                     icon: const Icon(Icons.text_increase_rounded))
               ],
             ),
             const Column(
               children: [
-                // 글 목록, 위젯 분리가 낫지 않을까?
                 article_widget(),
               ],
             )
